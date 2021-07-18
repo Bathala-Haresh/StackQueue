@@ -8,9 +8,10 @@ public class Operations {
 	public static int askUser() {
 		System.out.println("Stack Operations ::");
 		System.out.println("Press 1 to Push");
-		System.out.println("Press 2 to display stack");
-		System.out.println("press 3 to exit");
-		
+		System.out.println("Press 2 to Pop");
+		System.out.println("Press 3 to Peek");
+		System.out.println("Press 4 to display stack");
+		System.out.println("5 to exit");
 		int choice = sc.nextInt();
 		return choice;
 	}
@@ -29,12 +30,23 @@ public class Operations {
 				obj.push(push);
 				result = true;
 				break;
+
 			case 2:
-				obj.printStack();
+				obj.pop();
 				result = true;
 				break;
 
 			case 3:
+				System.out.println("Last element is: " + obj.peek());
+				result = true;
+				break;
+
+			case 4:
+				obj.printStack();
+				result = true;
+				break;
+				
+			case 5:
 				result = false;
 				break;
 
