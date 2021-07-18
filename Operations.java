@@ -13,7 +13,7 @@ public class Operations {
 		System.out.println("Press 4 to display stack");
 		System.out.println("Queue Operations ::");
 		System.out.println("Press 5 to Enqueue");
-		
+		System.out.println("Press 6 to dequeue");
 		System.out.println("Press 7 to display queue");
 		System.out.println("press 8 to quit");
 		int choice = sc.nextInt();
@@ -56,7 +56,11 @@ public class Operations {
 				obj.enqueue(enqueue);
 				result = true;
 				break;
-			
+			case 6:
+				obj.dequeue();
+				result=true;
+				obj.displayQueue();
+				break;
 				
 			case 7:
 				obj.displayQueue();
